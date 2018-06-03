@@ -47,3 +47,4 @@ docs/_build
 # Cookiecutter
 output/
 bower_components
+docs/build/
