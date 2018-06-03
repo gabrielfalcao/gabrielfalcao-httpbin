@@ -23,6 +23,12 @@ class HttpBinClient(object):
         self.base_url = base_url
         self.session = requests.Session()
 
+    def ip(self):
+        url = self.make_full_url("/ip")
+        response = self.session.get(url)
+        data = response.json()
+        return data['origin']
+
     def make_full_url(self, path):
         """Builds a full url to be used internally in this client.
 
